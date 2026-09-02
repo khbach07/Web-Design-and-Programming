@@ -1,141 +1,143 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-      <h1>My Intro Page</h1>
-    </header>
 
-    <nav>
-      <a href="#about">About Me</a>
-      <a href="skills">My Skills</a>
-      <a href="projects">My Projects</a>
-      <a href="forms">Contact Form</a>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <main>
-      <section id="about">
-        <h2>About Me</h2>
-        <p class="highlight" id="main-header">Hello my name is Lệ Xuân. I am a Data Science student.</p>
-        <p>My goal is to use data to solve real-world problems.</p>
+<body>
+  <header>
+    <h1>My Intro Page</h1>
+  </header>
 
-        <img
-          src="https://isme.neu.edu.vn/wp-content/uploads/2023/01/3-183923.png"
-          alt="National Economics University"
-        />
-      </section>
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="skills">My Skills</a>
+    <a href="projects">My Projects</a>
+    <a href="forms">Contact Form</a>
+  </nav>
 
-      <section id="skills">
-        <h2>My Skills</h2>
-        <ul>
-          <li>Programming Language: Python, HTML, Java</li>
-          <li>Data Analysis: Pandas, Numpy</li>
-          <li>Data Visualization: Tableau, Power BI</li>
-        </ul>
-      </section>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p class="highlight" id="main-header">Hello my name is Lệ Xuân. I am a Data Science student.</p>
+      <p>My goal is to use data to solve real-world problems.</p>
 
-      <div class="card1">
-        <h2>Customer Data</h2>
-        <p>Customer Churn: 20%</p>
-      </div>
+      <img src="https://isme.neu.edu.vn/wp-content/uploads/2023/01/3-183923.png" alt="National Economics University" />
+    </section>
 
-      <div class="card2">
-        <h2>Sales Data</h2>
-        <p>Total Sales: $50,000</p>
-      </div>
+    <section id="skills">
+      <h2>My Skills</h2>
+      <ul>
+        <li>Programming Language: Python, HTML, Java</li>
+        <li>Data Analysis: Pandas, Numpy</li>
+        <li>Data Visualization: Tableau, Power BI</li>
+      </ul>
+    </section>
 
-      <div class="card3">
-        <h2>Product Data</h2>
-        <p>Total Products: 150</p>
-      </div>
+    <div class="card1">
+      <h2>Customer Data</h2>
+      <p>Customer Churn: 20%</p>
+    </div>
 
-      <h2>Flexbox Demo</h2>
-      <div class="flex-container">
-        <div class="box">1</div>
-        <div class="box">2</div>
-        <div class="box">3</div>
-      </div>
+    <div class="card2">
+      <h2>Sales Data</h2>
+      <p>Total Sales: $50,000</p>
+    </div>
 
-      <h2>Grid Demo</h2>
-      <div class="grid-container">
-        <div class="box">A</div>
-        <div class="box">B</div>
-        <div class="box">C</div>
-        <div class="box">D</div>
-      </div>
-      
-      <section id="projects">
-        <h2>My Projects</h2>
+    <div class="card3">
+      <h2>Product Data</h2>
+      <p>Total Products: 150</p>
+    </div>
 
-        <table>
-          <caption>
-            My AI Models
-          </caption>
-          <thead>
-            <tr>
-              <th>Project Name</th>
-              <th>Model Used</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Churn Prediction</td>
-              <td>Logistic Regression</td>
-            </tr>
-            <tr>
-              <td>Fraud Detection</td>
-              <td>Random Forest</td>
-            </tr>
-            <tr>
-              <td>Credit Scoring</td>
-              <td>XGBoost</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+    <h2>Flexbox Demo</h2>
+    <div class="flex-container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
 
-      <section id="forms">
-        <h2>Contact Me</h2>
+    <h2>Grid Demo</h2>
+    <div class="grid-container">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+    </div>
 
-        <form action="/submit" method="post">
-          <label for="name">Full Name:</label>
-          <input id="name" name="name" type="text" />
-          <br />
+    <section id="projects">
+      <h2>My Projects</h2>
 
-          <label for="age">Age:</label>
-          <input id="age" name="age" type="number" />
-          <br />
+      <table>
+        <caption>
+          My AI Models
+        </caption>
+        <thead>
+          <tr>
+            <th>Project Name</th>
+            <th>Model Used</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Churn Prediction</td>
+            <td>Logistic Regression</td>
+          </tr>
+          <tr>
+            <td>Fraud Detection</td>
+            <td>Random Forest</td>
+          </tr>
+          <tr>
+            <td>Credit Scoring</td>
+            <td>XGBoost</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-          <label for="email">Email Address:</label>
-          <input id="email" name="email" type="email" />
-          <br />
+    <section id="forms">
+      <h2>Contact Me</h2>
 
-          <label for="gender">Gender:</label>
-          <input id="gender" name="gender" type="radio" value="male" /> Male
-          <br />
+      <form>
+        <label for="name">Full Name:</label>
+        <input id="name" name="name" type="text" required />
+        <br />
 
-          <label for="city">City:</label>
-          <select id="city" name="city">
-            <option value="hn">Hanoi</option>
-          </select>
-          <br />
+        <label for="age">Age:</label>
+        <input id="age" name="age" type="number" required />
+        <br />
 
-          <label for="notes">Notes:</label>
-          <textarea id="notes" name="notes"></textarea>
-          <br />
+        <label for="email">Email Address:</label>
+        <input id="email" name="email" type="email" required />
+        <br />
 
-          <button type="submit">Submit</button>
-        </form>
-      </section>
-    </main>
+        <label for="gender">Gender:</label>
+        <input id="gender" name="gender" type="radio" value="male" required /> Male
+        <br />
 
-    <footer>
-      <p>Liên hệ: xuxuxuan1902@gmail.com</p>
-    </footer>
-  </body>
+        <label for="city">City:</label>
+        <select id="city" name="city">
+          <option value="hn">Hanoi</option>
+        </select>
+        <br />
+
+        <label for="notes">Notes:</label>
+        <textarea id="notes" name="notes"></textarea>
+        <br />
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Liên hệ: xuxuxuan1902@gmail.com</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+
 </html>
