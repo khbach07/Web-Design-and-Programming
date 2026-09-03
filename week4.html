@@ -6,64 +6,62 @@
 <title>Tra cứu điểm thi</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style2.css">
 </head>
 <body>
+<main class="sheet">
 
-  <main class="sheet">
+<header class="sheet__header">
+  <div class="eyebrow-row">
+    <span class="eyebrow">GRADE REPORT</span>
+    <span class="eyebrow eyebrow--muted" id="dateStamp"></span>
+  </div>
+  <h1 class="title">Tra cứu điểm thi</h1>
+  <p class="subtitle">Nhập điểm ba môn học để tính tổng điểm và điểm trung bình.</p>
+</header>
 
-    <header class="sheet__header">
-      <div class="eyebrow-row">
-        <span class="eyebrow">GRADE REPORT</span>
-        <span class="eyebrow eyebrow--muted" id="dateStamp"></span>
-      </div>
-      <h1 class="title">Tra cứu điểm thi</h1>
-      <p class="subtitle">Nhập điểm ba môn học để tính tổng điểm và điểm trung bình.</p>
-    </header>
+<form id="scoreForm" class="ledger" novalidate>
 
-    <form id="scoreForm" class="ledger" novalidate>
+  <div class="ledger__row" data-row="1">
+    <input type="text" class="subject-input" id="subject1" value="Toán" aria-label="Tên môn học 1">
+    <div class="dots" aria-hidden="true"></div>
+    <input type="number" class="score-input" id="score1" placeholder="0" step="0.1" inputmode="decimal" aria-label="Điểm môn 1" required>
+  </div>
 
-      <div class="ledger__row" data-row="1">
-        <input type="text" class="subject-input" id="subject1" value="Toán" aria-label="Tên môn học 1">
-        <div class="dots" aria-hidden="true"></div>
-        <input type="number" class="score-input" id="score1" placeholder="0" step="0.1" inputmode="decimal" aria-label="Điểm môn 1" required>
-      </div>
+  <div class="ledger__row" data-row="2">
+    <input type="text" class="subject-input" id="subject2" value="Văn" aria-label="Tên môn học 2">
+    <div class="dots" aria-hidden="true"></div>
+    <input type="number" class="score-input" id="score2" placeholder="0" step="0.1" inputmode="decimal" aria-label="Điểm môn 2" required>
+  </div>
 
-      <div class="ledger__row" data-row="2">
-        <input type="text" class="subject-input" id="subject2" value="Văn" aria-label="Tên môn học 2">
-        <div class="dots" aria-hidden="true"></div>
-        <input type="number" class="score-input" id="score2" placeholder="0" step="0.1" inputmode="decimal" aria-label="Điểm môn 2" required>
-      </div>
+  <div class="ledger__row" data-row="3">
+    <input type="text" class="subject-input" id="subject3" value="Tiếng Anh" aria-label="Tên môn học 3">
+    <div class="dots" aria-hidden="true"></div>
+    <input type="number" class="score-input" id="score3" placeholder="0" step="0.1" inputmode="decimal" aria-label="Điểm môn 3" required>
+  </div>
 
-      <div class="ledger__row" data-row="3">
-        <input type="text" class="subject-input" id="subject3" value="Tiếng Anh" aria-label="Tên môn học 3">
-        <div class="dots" aria-hidden="true"></div>
-        <input type="number" class="score-input" id="score3" placeholder="0" step="0.1" inputmode="decimal" aria-label="Điểm môn 3" required>
-      </div>
+  <div id="messageSlot" class="message-slot" aria-live="polite"></div>
 
-      <div id="messageSlot" class="message-slot" aria-live="polite"></div>
+  <button type="submit" class="btn-submit">
+    <span>Tính điểm</span>
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
 
-      <button type="submit" class="btn-submit">
-        <span>Tính điểm</span>
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
+</form>
 
-    </form>
+<section id="result" class="result" hidden>
+  <div class="result__row">
+    <span class="result__label">Tổng điểm</span>
+    <span class="result__value" id="totalValue">0.0</span>
+  </div>
 
-    <section id="result" class="result" hidden>
-      <div class="result__row">
-        <span class="result__label">Tổng điểm</span>
-        <span class="result__value" id="totalValue">0.0</span>
-      </div>
+  <svg class="underline" width="100%" height="14" viewBox="0 0 400 14" preserveAspectRatio="none" aria-hidden="true">
+    <path id="underlinePath" d="M4 8 C 60 3, 100 11, 160 6 S 260 4, 320 9 S 380 5, 396 8" fill="none" stroke="#1F5FDB" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+</section>
 
-      <svg class="underline" width="100%" height="14" viewBox="0 0 400 14" preserveAspectRatio="none" aria-hidden="true">
-        <path id="underlinePath" d="M4 8 C 60 3, 100 11, 160 6 S 260 4, 320 9 S 380 5, 396 8" fill="none" stroke="#C1442D" stroke-width="2.5" stroke-linecap="round"/>
-      </svg>
-    </section>
-
-  </main>
-
+</main>
 <script src="script.js"></script>
 </body>
 </html>
