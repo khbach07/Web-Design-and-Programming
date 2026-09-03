@@ -15,6 +15,7 @@
   --font-display: "Fraunces", serif;
   --font-body: "Inter", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
+  --font-rounded: "Quicksand", sans-serif;
 
   --radius: 14px;
   --radius-sm: 8px;
@@ -130,10 +131,10 @@ body {
   border: none;
   background: var(--color-accent-soft);
   border-radius: var(--radius-sm);
-  font-family: var(--font-mono);
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--color-accent);
+  font-family: var(--font-rounded);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-ink);
   text-align: center;
   padding: 6px 4px;
 }
@@ -228,10 +229,6 @@ body {
   font-size: 34px;
   font-weight: 500;
   color: var(--color-accent);
-}
-
-.underline path {
-  stroke: var(--color-accent);
 }
 
 /* ---------- Responsive ---------- */
