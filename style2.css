@@ -1,0 +1,248 @@
+/* ============================================================
+   Tra cứu điểm thi — Modern Minimalist / Blue & White
+   ============================================================ */
+
+:root {
+  --color-bg: #ffffff;
+  --color-bg-subtle: #f5f8fd;
+  --color-ink: #101826;
+  --color-ink-muted: #5b6b82;
+  --color-accent: #1f5fdb;
+  --color-accent-soft: #e8f0fd;
+  --color-line: #dfe6f2;
+  --color-line-strong: #c3d1e8;
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --radius: 14px;
+  --radius-sm: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+  background: var(--color-bg-subtle);
+  font-family: var(--font-body);
+  color: var(--color-ink);
+}
+
+/* ---------- Sheet ---------- */
+
+.sheet {
+  width: 100%;
+  max-width: 420px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: 40px 36px 36px;
+}
+
+.sheet__header {
+  margin-bottom: 32px;
+}
+
+.eyebrow-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+}
+
+.eyebrow--muted {
+  color: var(--color-ink-muted);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0 0 10px;
+  color: var(--color-ink);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-ink-muted);
+}
+
+/* ---------- Ledger rows ---------- */
+
+.ledger {
+  display: flex;
+  flex-direction: column;
+}
+
+.ledger__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.subject-input {
+  flex: 0 0 auto;
+  width: 110px;
+  border: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-ink);
+  padding: 4px 2px;
+}
+
+.subject-input:focus {
+  outline: none;
+  color: var(--color-accent);
+}
+
+.dots {
+  flex: 1;
+  height: 0;
+  border-bottom: 1px dotted var(--color-line-strong);
+  margin-bottom: 6px;
+}
+
+.score-input {
+  flex: 0 0 auto;
+  width: 64px;
+  border: none;
+  background: var(--color-accent-soft);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-accent);
+  text-align: center;
+  padding: 6px 4px;
+}
+
+.score-input::placeholder {
+  color: var(--color-line-strong);
+}
+
+.score-input:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+/* remove number input spinners for a cleaner field */
+.score-input::-webkit-outer-spin-button,
+.score-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.score-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* ---------- Message / validation ---------- */
+
+.message-slot {
+  min-height: 18px;
+  font-size: 12.5px;
+  color: #c0392b;
+  margin-top: 12px;
+}
+
+/* ---------- Submit button ---------- */
+
+.btn-submit {
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 20px;
+  background: var(--color-ink);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn-submit:hover {
+  background: var(--color-accent);
+}
+
+.btn-submit:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.btn-submit svg {
+  transition: transform 0.15s ease;
+}
+
+.btn-submit:hover svg {
+  transform: translateX(2px);
+}
+
+/* ---------- Result ---------- */
+
+.result {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-line);
+}
+
+.result__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.result__label {
+  font-size: 13px;
+  color: var(--color-ink-muted);
+}
+
+.result__value {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.underline path {
+  stroke: var(--color-accent);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 460px) {
+  .sheet {
+    padding: 32px 24px 28px;
+  }
+
+  .subject-input {
+    width: 84px;
+    font-size: 14px;
+  }
+}
